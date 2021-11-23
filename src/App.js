@@ -1,11 +1,12 @@
 
 import AllCountries from './AllCountries';
 import './App.css';
-
+import Header from './Header';
 
 function App() {
   return (
-    <div>
+    <div className="container-md">
+      <Header />
       <AllCountries />
     </div>
   );

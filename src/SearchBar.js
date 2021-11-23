@@ -1,6 +1,7 @@
 import React,{ useState }from 'react'
 
 function SearchBar(props) {
+    
     const [searchPhrase,setSearchPhrase] = useState("");
     const handleChange = (e)=>{
         const value = e.target.value.toLowerCase();
@@ -10,7 +11,7 @@ function SearchBar(props) {
     return (
         <div>
             <input type="text" value={searchPhrase} 
-            onChange={handleChange}></input>
+            onChange={handleChange} className="searchBarStyle" placeholder="Search for a country"></input>
         </div>
     )
 }

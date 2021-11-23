@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 
 function AllCountries() {
     const [searchedCountries,setSearchedCountries]=useState(AllCountriesData);
-    
+
     const handleSearch =(searchPhrase)=>{
         const filteredCountries= AllCountriesData.filter(country=>{
             return country.name.toLocaleLowerCase().includes(searchPhrase) || 
@@ -20,7 +20,7 @@ function AllCountries() {
             <SearchBar onSearch={handleSearch}/>
             </div>
             <div>
-            <ul className="list-unstyled d-flex flex-wrap justify-content-evenly">
+            <ul className="list-unstyled d-flex flex-wrap justify-content-between">
                 {searchedCountries.map((country, index) => {
                     return <Country key={index} data={country} />
                 })}
