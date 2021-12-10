@@ -25,7 +25,7 @@ function AllCountries() {
     }
     useEffect(() => {
         setRegions(uniqeRegions(data))
-    }, [])
+    }, [data])
 
     const handleRegionChange = (e) => {
         const region = e.target.value;
